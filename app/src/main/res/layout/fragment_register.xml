@@ -10,7 +10,7 @@
     <data>
         <variable
             name="fragmentregister"
-            type="com.rawenterprises.rawapp.ui.fragment.registerFragment" />
+            type="com.rawenterprises.rawapp.ui.fragment.RegisterFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
