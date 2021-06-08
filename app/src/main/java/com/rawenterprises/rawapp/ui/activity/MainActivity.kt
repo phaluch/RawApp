@@ -2,19 +2,30 @@
 
 package com.rawenterprises.rawapp.ui.activity
 
-import android.app.ActivityManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.room.*
-import com.google.android.gms.tasks.Task
+import com.parse.ParseException
+import com.parse.ParseObject
+import com.parse.ParseQuery
 import com.rawenterprises.rawapp.R
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val query = ParseQuery.getQuery<ParseObject>("Avaliation")
+
+        var result = query.getInBackground("yqFxoXb2KH");
+
+        Log.d("PARSE", "${result.result}")
+
     }
 }
 
