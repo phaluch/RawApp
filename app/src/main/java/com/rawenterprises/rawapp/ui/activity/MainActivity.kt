@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val query = ParseQuery.getQuery<ParseObject>("Avaliation");
-        query.selectKeys(mutableListOf("title", "coment", "pros", "contras"))
+        query.selectKeys(mutableListOf("title", "coment", "pros", "contras"));
 
         query.findInBackground { objects, e ->
             if (e == null) {

@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="fragmentologin"
+            name="loginFragment"
             type="com.rawenterprises.rawapp.ui.fragment.LoginFragment" />
     </data>
 
