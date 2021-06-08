@@ -13,6 +13,6 @@ class RawViewModel @Inject constructor(
 
     fun funChamandoRequisicao() {
         TODO("Not yet implemented")
-        interactor.funChamandoRequisicao()
+//        interactor.funChamandoRequisicao()
     }
 }
