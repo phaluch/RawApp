@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -30,16 +32,60 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
 
+    /** Libraries do Kotlin */
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.5.0'
     implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
+
+    /** Constraint Layout */
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
+
+    /** Material Design */
+    implementation 'com.google.android.material:material:1.3.0'
+
+    /** Kotlin Coroutines */
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+
+    /** Componentes de Arquitetura Básica */
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5' // Navegação dentro do app
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0' // Avalia o ciclo de vida dentro dos componentes
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1' // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+
+    /** Requisição web [Retrofit] */
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' // Usa alguns plugins pra melhorar a conversão de dados
+    // Converte os .json em objetos em memória
+    implementation 'com.google.code.gson:gson:2.8.6' // Esse cara que converte
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // E é esse cara que faz os dois conversarem
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    // Usa só pra mostrar no console os dados da requisição
+
+    /** Hilt - Injeção de Dependências */ // Habilita a injeção de dependências
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltAndroidXVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltAndroidXVersion"
+
+    /** Picasso - Lidar com imagens */
+    implementation "com.squareup.picasso:picasso:2.71828"
+
+    /** Firebase */ // Comunicação com Firebase
+    implementation platform('com.google.firebase:firebase-bom:26.7.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+    /** Dependências de testes */
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
