@@ -7,7 +7,7 @@
     <data>
         <variable
             name="fragment_recuperar_senha"
-            type="com.rawenterprises.rawapp.ui.fragment.recuperarsenhaFragment" />
+            type="com.rawenterprises.rawapp.ui.fragment.RecuperarSenhaFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
