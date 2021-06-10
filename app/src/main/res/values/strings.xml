@@ -20,4 +20,33 @@
     <string name="fotos">FOTOS</string>
     <string name="qtd_fotos">5+</string>
 
+    <!-- HOME PAGE DISCOVER -->
+    <string name="home_title">DESCOBRIR</string>
+
+    <string name="lojas_title">LOJAS</string>
+    <string name="lojas_sub_title">Lojas próximas de você</string>
+
+    <string name="produtos_tendencia_title">PRODUTOS EM TENDENCIA</string>
+    <string name="produtos_tendencia_sub_title">Veja os produtos com mais avaliações recentemente</string>
+
+    <string name="produtos_top_title">PRODUTOS MAIS BEM AVALIADOS</string>
+    <string name="produtos_top_sub_title">Veja os produtos melhor avaliados</string>
+
+    <!-- LOGIN -->
+    <string name="login_registered">Você já tem uma conta?</string>
+    <string name="register_title">Crie sua conta</string>
+    <string name="register_terms">Ao criar sua conta, você está concordando com nossos <u>Termos de uso</u> e <u>Política de Privacidade</u></string>
+    <string name="forgot_instructions">Preencha seu email e envie. Em segundos você receberá um link de recuperação de senha.</string>
+    <string name="teste_pelo_editor">VALOR DO EDITOR</string>
+    <string name="hint_matricula">Matrícula</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_email">Email</string>
+    <string name="btn_login">ENTRAR</string>
+    <string name="btn_cadastrar">CADASTRAR</string>
+    <string name="txt_new_user"><u>Novo usuário? Crie uma conta</u></string>
+    <string name="txt_forgot_password">Equeceu a Senha?</string>
+    <string name="tx_forgot_password_title">Recupere sua senha</string>
+    <string name="btn_forgot">ENVIAR</string>
+    <string name="hint_repeat_password">Repita a senha</string>
+
 </resources>
