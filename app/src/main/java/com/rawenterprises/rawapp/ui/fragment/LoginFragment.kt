@@ -7,11 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
-import com.rawenterprises.rawapp.R
 import com.rawenterprises.rawapp.databinding.FragmentLoginBinding
 import com.rawenterprises.rawapp.ui.activity.AppActivity
 import com.rawenterprises.rawapp.viewmodel.RawViewModel
@@ -54,14 +51,6 @@ class LoginFragment : Fragment() {
                         .show()
                 }
             }
-        }
-
-        binding.tvMainEsqueceuSenha.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_recuperarSenhaFragment)
-        }
-
-        binding.txCriarCadastro.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
     }
 
