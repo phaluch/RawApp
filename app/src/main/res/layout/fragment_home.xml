@@ -130,15 +130,25 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             android:text="@string/produtos_top_title"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/ivArrowRight3"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTendenciasDesc" />
+
+        <ImageView
+            android:id="@+id/ivArrowRight3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTendenciasDesc"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
         <TextView
             android:id="@+id/tvTopDesc"
@@ -150,46 +160,63 @@
             android:text="@string/produtos_top_sub_title"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/ivArrowRight3"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTop" />
-
-        <ImageView
-            android:id="@+id/ivArrowRight3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTendenciasDesc"
-            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
         <Button
             android:id="@+id/btMeuPerfil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="252dp"
+            android:layout_marginTop="312dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/meu_perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTopDesc" />
 
-        <Button
-            android:id="@+id/btNovaAvaliacao"
+        <TextView
+            android:id="@+id/tvTop2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="nova avaliação"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/produtos_todos_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/ivArrowRight3"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btMeuPerfil"
-            app:layout_constraintVertical_bias="0.479" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTendenciasDesc" />
+
+        <TextView
+            android:id="@+id/tvTopDesc2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/produtos_todos_sub_title"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/ivArrowRight3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTop2" />
+
+        <ImageView
+            android:id="@+id/ivArrowRight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivArrowRight3"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

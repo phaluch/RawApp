@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.rawenterprises.rawapp.R
 import com.rawenterprises.rawapp.databinding.FragmentHomeBinding
 import com.rawenterprises.rawapp.viewmodel.RawViewModel
@@ -33,6 +34,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btMeuPerfil.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+        }
 //        viewmodel.funChamandoRequisicao()
     }
 }
