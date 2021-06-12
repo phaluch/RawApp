@@ -79,14 +79,14 @@ class RawAppModule {
         @GET("user/avaliations")
         @Headers("Content-Type: application/json")
         /** ------------ > Data */
-        suspend fun getReviewsByUserEmail(): List<Avaliation>
+        suspend fun getReviewsByUserEmail(@Query("email") email : String): List<Avaliation>
 
         @GET("avaliations")
         @Headers("Content-Type: application/json")
         /** ------------ > Data */
         suspend fun getReviewsByProductId(): List<Avaliation>
 
-        @POST("/avaliations")
+        @POST("avaliations")
         @Headers("Content-Type: application/json")
         /** ------------ > Data */
         suspend fun writeReviewsByProductId(): List<Avaliation>

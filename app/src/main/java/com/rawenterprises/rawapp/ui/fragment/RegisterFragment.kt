@@ -10,7 +10,9 @@ import com.rawenterprises.rawapp.R
 import com.rawenterprises.rawapp.databinding.FragmentLoginBinding
 import com.rawenterprises.rawapp.databinding.FragmentRegisterBinding
 import com.rawenterprises.rawapp.viewmodel.RawViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RegisterFragment : Fragment() {
 
     private lateinit var binding: FragmentRegisterBinding

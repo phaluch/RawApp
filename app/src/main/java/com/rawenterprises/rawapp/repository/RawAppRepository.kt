@@ -31,6 +31,11 @@ class RawAppRepository @Inject constructor(
         return request.getUserByEmail(email)
     }
 
+    suspend fun loadCurrentUserByEmail(email : String): RawUser {
+        Log.d("VIEWMODEL","Repository> loadUserByEmail()")
+        return request.getUserByEmail(email)
+    }
+
     suspend fun writeUser(): RawUser {
         Log.d("VIEWMODEL","Repository> writeUser()")
         val currentuser = RawUser(
@@ -39,6 +44,10 @@ class RawAppRepository @Inject constructor(
             nome = "Pedro Segundo"
         )
         return request.postCreateUser(currentuser)
+    }
+    suspend fun loadCurrentUserReviews(email: String): List<Avaliation> {
+        Log.d("VIEWMODEL","Repository> writeUser()")
+        return request.getReviewsByUserEmail(email)
     }
 
 

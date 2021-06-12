@@ -1,6 +1,7 @@
 package com.rawenterprises.rawapp.interactor
 
 import android.util.Log
+import com.rawenterprises.rawapp.domain.Avaliation
 import com.rawenterprises.rawapp.domain.DataGetProdutos
 import com.rawenterprises.rawapp.domain.Produto
 import com.rawenterprises.rawapp.domain.RawUser
@@ -32,5 +33,29 @@ class RawAppInteractor @Inject constructor(
         val response = repository.loadUserByEmail(email)
         Log.d("VIEWMODEL","Interactor> got response")
         return response
+    }
+
+    suspend fun loadCurrentUserByEmail(email : String): RawUser {
+        // TODO("Not yet implemented")
+        Log.d("VIEWMODEL","Interactor> repository()")
+        val response = repository.loadCurrentUserByEmail(email)
+        Log.d("VIEWMODEL","Interactor> got response")
+        return response
+    }
+
+    suspend fun loadCurrentUserReviews(email : String): List<Avaliation> {
+        // TODO("Not yet implemented")
+        Log.d("VIEWMODEL","Interactor> repository()")
+        val response = repository.loadCurrentUserReviews(email)
+        Log.d("VIEWMODEL","Interactor> got response")
+        return response
+    }
+
+    suspend fun countCurrentUserReviews(email : String): Int {
+        // TODO("Not yet implemented")
+        Log.d("VIEWMODEL","Interactor> repository()")
+        val response = repository.loadCurrentUserReviews(email)
+        Log.d("VIEWMODEL","Interactor> got response")
+        return response.size
     }
 }
