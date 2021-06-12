@@ -49,6 +49,7 @@
     <string name="txt_forgot_password">Equeceu a Senha?</string>
     <string name="tx_forgot_password_title">Recupere sua senha</string>
     <string name="btn_forgot">ENVIAR</string>
+    <string name="btn_requisicoes">REQUISITAR</string>
     <string name="hint_repeat_password">Repita a senha</string>
 
     <!--PROFILE-->

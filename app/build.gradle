@@ -84,6 +84,8 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6' // Esse cara que converte
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // E é esse cara que faz os dois conversarem
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     // Usa só pra mostrar no console os dados da requisição
 
     /** Hilt - Injeção de Dependências */ // Habilita a injeção de dependências
