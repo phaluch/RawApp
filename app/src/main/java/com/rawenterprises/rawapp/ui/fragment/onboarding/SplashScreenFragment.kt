@@ -11,11 +11,13 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.rawenterprises.rawapp.R
 import com.rawenterprises.rawapp.databinding.FragmentSplashScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class SplashScreenFragment : Fragment() {
 
     private lateinit var binding: FragmentSplashScreenBinding

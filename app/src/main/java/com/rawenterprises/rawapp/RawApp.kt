@@ -11,16 +11,11 @@ import retrofit2.http.Headers
 @HiltAndroidApp
 class RawApp : Application() {
 
+    public val userEmail : String = ""
+
     // Initializes Parse SDK as soon as the application is created
     override fun onCreate() {
         super.onCreate()
-        Parse.initialize(
-            Parse.Configuration.Builder(this)
-                .applicationId("hYqvNNWshu88Ch6ItwORC4Prm1otQVLEgbxGh2bB")
-                .clientKey("kl5lorpvdyoLj6i371AVVakqV4psFkw3drSreuNH")
-                .server("https://parseapi.back4app.com")
-                .build()
-        )
     }
 
 }
