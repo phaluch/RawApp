@@ -17,3 +17,5 @@ local.properties
 .idea/libraries/*
 .gradle/6.7.1/executionHistory/executionHistory.bin
 .idea/modules/app/RawApp.app.iml
+*.bin
+*.lock
