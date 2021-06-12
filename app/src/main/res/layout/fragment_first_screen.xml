@@ -17,6 +17,7 @@
         tools:context=".ui.fragment.onboarding.screens.FirstScreenFragment">
 
         <!-- TODO: Update blank fragment layout -->
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
@@ -24,18 +25,54 @@
             android:text="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/btNext"
+            android:id="@+id/btNextFS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="32dp"
-            android:text="Button"
+            android:text="Próximo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="225dp"
+            android:layout_height="308dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_lock_24" />
+
+        <TextView
+            android:id="@+id/tvFirstScreen"
+            android:layout_width="293dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="20dp"
+            android:text="Aqui não tem taboo, não tem preconceito, não tem restrição: pode dar sua opinião honesta, e se preparar pra discussões interessantes. "
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmbiente" />
+
+        <TextView
+            android:id="@+id/tvAmbiente"
+            android:layout_width="301dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:text="Ambiente Seguro"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
