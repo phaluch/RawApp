@@ -30,6 +30,8 @@
     <string name="produtos_tendencia_sub_title">Veja os produtos com mais avaliações recentemente</string>
     <string name="produtos_top_title">PRODUTOS MAIS BEM AVALIADOS</string>
     <string name="produtos_top_sub_title">Veja os produtos melhor avaliados</string>
+    <string name="produtos_todos_title">TODOS OS PRODUTOS</string>
+    <string name="produtos_todos_sub_title">Veja a lista com todos os produtos cadastrados</string>
     <string name="meu_perfil">MEU PERFIL</string>
 
     <!-- LOGIN -->
@@ -55,5 +57,15 @@
     <string name="email">Email</string>
     <string name="quit">SAIR</string>
     <string name="reviews">MINHAS REVIEWS</string>
+
+    <!--CREATE-->
+    <string name="create_review_title">CRIAR UMA AVALIAÇÃO</string>
+    <string name="comment_title">COMENTÁRIO:</string>
+    <string name="pros_title">PROS</string>
+    <string name="contras_title">CONTRAS</string>
+    <string name="rating_qualidade">QUALIDADE</string>
+    <string name="rating_usabilidade">USABILIDADE</string>
+    <string name="rating_custo">CUSTO</string>
+    <string name="criar_button">CRIAR</string>
 
 </resources>
