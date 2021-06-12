@@ -165,13 +165,13 @@
             app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
         <Button
-            android:id="@+id/btMInhasAvaliacoes"
+            android:id="@+id/btMeuPerfil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="252dp"
             android:layout_marginEnd="16dp"
-            android:text="Minhas avaliações"
+            android:text="@string/meu_perfil"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -188,7 +188,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btMInhasAvaliacoes"
+            app:layout_constraintTop_toBottomOf="@+id/btMeuPerfil"
             app:layout_constraintVertical_bias="0.479" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

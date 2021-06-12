@@ -35,5 +35,32 @@
         android:id="@+id/loginFragment"
         android:name="com.rawenterprises.rawapp.ui.fragment.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/fragment_login"/>
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_appActivity"
+            app:destination="@id/appActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_appActivity2"
+            app:destination="@id/appActivity"
+            app:popUpTo="@id/appActivity"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_recuperarSenhaFragment"
+            app:destination="@id/recuperarSenhaFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/appActivity"
+        android:name="com.rawenterprises.rawapp.ui.activity.AppActivity"
+        android:label="AppActivity" />
+    <fragment
+        android:id="@+id/recuperarSenhaFragment"
+        android:name="com.rawenterprises.rawapp.ui.fragment.RecuperarSenhaFragment"
+        android:label="RecuperarSenhaFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.rawenterprises.rawapp.ui.fragment.RegisterFragment"
+        android:label="RegisterFragment" />
 </navigation>
