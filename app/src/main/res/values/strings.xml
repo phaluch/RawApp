@@ -3,7 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--PRODUTO-->
     <string name="product_title">Titulo do Produto</string>
+    <string name="produto_info">INFO DO PRODUTO</string>
     <string name="info_produto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</string>
     <string name="avaliations">AVALIAÇÕES ></string>
     <string name="number">22K</string>
@@ -22,15 +24,13 @@
 
     <!-- HOME PAGE DISCOVER -->
     <string name="home_title">DESCOBRIR</string>
-
     <string name="lojas_title">LOJAS</string>
     <string name="lojas_sub_title">Lojas próximas de você</string>
-
     <string name="produtos_tendencia_title">PRODUTOS EM TENDENCIA</string>
     <string name="produtos_tendencia_sub_title">Veja os produtos com mais avaliações recentemente</string>
-
     <string name="produtos_top_title">PRODUTOS MAIS BEM AVALIADOS</string>
     <string name="produtos_top_sub_title">Veja os produtos melhor avaliados</string>
+    <string name="meu_perfil">MEU PERFIL</string>
 
     <!-- LOGIN -->
     <string name="login_registered">Você já tem uma conta?</string>
@@ -48,5 +48,12 @@
     <string name="tx_forgot_password_title">Recupere sua senha</string>
     <string name="btn_forgot">ENVIAR</string>
     <string name="hint_repeat_password">Repita a senha</string>
+
+    <!--PROFILE-->
+    <string name="my_profile">MEU PERFIL</string>
+    <string name="who_iam">Quem sou eu?</string>
+    <string name="email">Email</string>
+    <string name="quit">SAIR</string>
+    <string name="reviews">MINHAS REVIEWS</string>
 
 </resources>
