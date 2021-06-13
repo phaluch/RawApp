@@ -69,8 +69,10 @@ class LoginFragment : Fragment() {
 
                     val sharedPref = requireActivity().getSharedPreferences("GlobalVar", Context.MODE_PRIVATE)
                     val editor = sharedPref.edit()
-                    editor.putString("emailGlobal", email)
-                    editor.apply()
+
+                    viewmodel.loadUserByEmail(email, editor)
+                    Log.d("VIEWMODEL", "resultadoLoadUserByEmail.value=${viewmodel.resultadoLoadUserByEmail.value}")
+                    val objectId = viewmodel.resultadoLoadUserByEmail.value?.objectId
 
                     Log.d("VIEWMODEL", "btLoginListener > Saved ${email}")
                     val intencaoDeChamada = Intent(activity, AppActivity::class.java)

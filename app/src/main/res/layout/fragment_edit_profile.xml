@@ -5,14 +5,14 @@
 
     <data>
         <variable
-            name="profileFragment"
-            type="com.rawenterprises.rawapp.ui.fragment.ProfileFragment" />
+            name="editProfileFragment"
+            type="com.rawenterprises.rawapp.ui.fragment.EditProfileFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragment.ProfileFragment">
+        tools:context=".ui.fragment.EditProfileFragment">
 
         <TextView
             android:id="@+id/textView4"
@@ -38,14 +38,15 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             tools:srcCompat="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/tvProfileNomeUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/etEditProfileNomeUser"
+            android:layout_width="381dp"
+            android:layout_height="56dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="128dp"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:hint="Como devemos nos dirigir a você?"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,16 +63,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.053"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvProfileNomeUser" />
+            app:layout_constraintTop_toBottomOf="@+id/etEditProfileNomeUser" />
 
-        <TextView
-            android:id="@+id/tvProfileDescricaoUser"
+        <EditText
+            android:id="@+id/etEditProfileDescricaoUser"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="160dp"
+            android:hint="Conta pra gente: quem é você? Do que gosta?"
             android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/btEditProfileEnviar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.045"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,12 +87,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/quit"
+            android:text="ENVIAR ATUALIZAÇÃO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvProfileDescricaoUser"
+            app:layout_constraintTop_toBottomOf="@+id/etEditProfileDescricaoUser"
             app:layout_constraintVertical_bias="0.921" />
 
         <TextView
@@ -97,35 +101,12 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="@+id/tvProfileDescricaoUser"
+            app:layout_constraintBottom_toTopOf="@+id/etEditProfileDescricaoUser"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3"
             app:layout_constraintVertical_bias="0.12" />
 
-        <Button
-            android:id="@+id/btMinhasReviews"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/reviews"
-            app:layout_constraintBottom_toTopOf="@+id/btEditProfileEnviar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.065"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvProfileDescricaoUser"
-            app:layout_constraintVertical_bias="0.211" />
-
-        <Button
-            android:id="@+id/btProfileEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/reviews"
-            app:layout_constraintBottom_toTopOf="@+id/btEditProfileEnviar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.836"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvProfileDescricaoUser"
-            app:layout_constraintVertical_bias="0.208" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
