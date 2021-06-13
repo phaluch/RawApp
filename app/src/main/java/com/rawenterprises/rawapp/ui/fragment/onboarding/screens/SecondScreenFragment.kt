@@ -7,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import androidx.viewpager2.widget.ViewPager2
 import com.rawenterprises.rawapp.R
-import com.rawenterprises.rawapp.databinding.FragmentHomeBinding
 import com.rawenterprises.rawapp.databinding.FragmentSecondScreenBinding
-import com.rawenterprises.rawapp.databinding.FragmentSplashScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class SecondScreenFragment : Fragment() {
 
     private lateinit var binding: FragmentSecondScreenBinding

@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.rawenterprises.rawapp.databinding.FragmentRecuperarSenhaBinding
 import com.rawenterprises.rawapp.viewmodel.RawViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class RecuperarSenhaFragment : Fragment() {
 
     private lateinit var binding: FragmentRecuperarSenhaBinding
