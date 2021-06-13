@@ -40,11 +40,6 @@ public class RawViewModel @Inject constructor(
      */
 
 
-    ////////////////////////////////////////
-    ///// PDM-0504 ~ 1:50:00
-    ////////////////////////////////////////
-
-
     fun loadProdutos() {
         Log.d("VIEWMODEL","Entrei na Função")
 
