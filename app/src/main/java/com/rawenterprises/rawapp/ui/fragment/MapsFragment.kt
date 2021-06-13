@@ -22,7 +22,7 @@ class MapsFragment : Fragment() {
     ): View? {
 
         binding = FragmentMapsBinding.inflate(inflater, container, false)
-        binding.mapsFragment= this
+        binding.mapsFragment = this
         binding.lifecycleOwner = this
         return binding.root
     }
