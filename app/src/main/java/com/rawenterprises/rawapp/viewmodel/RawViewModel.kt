@@ -1,6 +1,8 @@
 package com.rawenterprises.rawapp.viewmodel
 
 import android.app.Application
+import android.content.Context
+import android.content.SharedPreferences
 import android.util.Log
 import android.widget.RemoteViews
 import androidx.lifecycle.AndroidViewModel
@@ -49,22 +51,37 @@ public class RawViewModel @Inject constructor(
         }
     }
 
-    fun writeUser() {
+    fun writeUser(u : RawUser) {
         Log.d("VIEWMODEL","Entrei na Função")
 
         viewModelScope.launch {
             Log.d("VIEWMODEL","Chamando o Interactor")
-            resultadoWriteUser.value = interactor.writeUser()  // Dentro do tal 'Container' os valores ficam no .value
+            resultadoWriteUser.value = interactor.writeUser(u)  // Dentro do tal 'Container' os valores ficam no .value
         }
     }
 
-    fun loadUserByEmail(email : String)
+    fun updateUser(u : RawUser) {
+        Log.d("VIEWMODEL","Entrei na Função")
+
+        viewModelScope.launch {
+            Log.d("VIEWMODEL","Chamando o Interactor")
+            interactor.updateUser(u)  // Dentro do tal 'Container' os valores ficam no .value
+        }
+    }
+
+    fun loadUserByEmail(email : String, editor : SharedPreferences.Editor)
     {
         Log.d("VIEWMODEL","Entrei na Função")
 
         viewModelScope.launch {
             Log.d("VIEWMODEL","Chamando o Interactor")
-            resultadoLoadUserByEmail.value = interactor.loadUserByEmail(email)  // Dentro do tal 'Container' os valores ficam no .value
+            val response = interactor.loadUserByEmail(email)
+            resultadoLoadUserByEmail.value = response // Dentro do tal 'Container' os valores ficam no .value
+
+            editor.putString("emailGlobal", response.email)
+            editor.putString("objectId", response.objectId)
+            Log.d("VIEWMODEL","putStrings no sharedRefs (emailGlobal=${response.email}, objectId=${response.objectId})")
+            editor.apply()
         }
     }
     fun loadCurrentUserByEmail(email : String)

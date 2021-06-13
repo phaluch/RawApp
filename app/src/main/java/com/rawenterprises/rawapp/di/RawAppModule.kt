@@ -91,6 +91,10 @@ class RawAppModule {
         /** ------------ > Data */
         suspend fun writeReviewsByProductId(): List<Avaliation>
 
+        @PUT("user")
+        @Headers("Content-Type: application/json")
+        suspend fun putUser(@Body userData: RawUser)
+
 
 
 

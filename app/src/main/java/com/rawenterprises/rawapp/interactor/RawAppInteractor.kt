@@ -19,10 +19,10 @@ class RawAppInteractor @Inject constructor(
         return response
     }
 
-    suspend fun writeUser(): RawUser {
+    suspend fun writeUser(u : RawUser): RawUser {
         // TODO("Not yet implemented")
         Log.d("VIEWMODEL","Interactor> repository()")
-        val response = repository.writeUser()
+        val response = repository.writeUser(u)
         Log.d("VIEWMODEL","Interactor> got response")
         return response
     }
@@ -57,5 +57,11 @@ class RawAppInteractor @Inject constructor(
         val response = repository.loadCurrentUserReviews(email)
         Log.d("VIEWMODEL","Interactor> got response")
         return response.size
+    }
+
+    suspend fun updateUser(u: RawUser) {
+        Log.d("VIEWMODEL","Interactor> repository()")
+        repository.updateUser(u)
+        Log.d("VIEWMODEL","Interactor> got response")
     }
 }

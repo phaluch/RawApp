@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.rawenterprises.rawapp.R
 import com.rawenterprises.rawapp.databinding.FragmentProfileBinding
 import com.rawenterprises.rawapp.domain.RawUser
 import com.rawenterprises.rawapp.viewmodel.RawViewModel
@@ -23,12 +25,19 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        
+        
         Log.d("VIEWMODEL","ProfileFragment>onCreateView> criando binding")
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         binding.profileFragment = this
         binding.lifecycleOwner = this
 
-        /** Requisicao pra pegar infos do usuário */
+        val sharedPref = requireActivity().getSharedPreferences("GlobalVar", Context.MODE_PRIVATE)
+        val email = sharedPref.getString("emailGlobal", null)
+        if (email != null) {
+            Log.d("VIEWMODEL", "Passei do  email != null")
+            viewmodelProfile.loadCurrentUserByEmail(email)
+        }
 
         // Inflate the layout for this fragment
         Log.d("VIEWMODEL","ProfileFragment>onCreateView> Retornando binding")
@@ -45,37 +54,32 @@ class ProfileFragment : Fragment() {
          * encerrado
          */
 
+        /** Preencher a tela */
 
         val sharedPref = requireActivity().getSharedPreferences("GlobalVar", Context.MODE_PRIVATE)
         val email = sharedPref.getString("emailGlobal", null)
+
+        viewmodelProfile.resultadoLoadCurrentUser.observe(viewLifecycleOwner) { c : RawUser ->
+            Log.d("VIEWMODEL", "Using valores=${c.quem_sou},${c.nome}")
+            binding.tvProfileDescricaoUser.setText("${c.quem_sou}")
+            binding.tvProfileNomeUser.setText("${c.nome}")
+        }
+
+        binding.btProfileEdit.setOnClickListener{
+            findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
+        }
+
+        binding.btMinhasReviews.setOnClickListener{
+            if (email != null) {
+                Log.d("VIEWMODEL", "Passei do  email != null")
+                viewmodelProfile.loadCurrentUserByEmail(email)
+            }
+        }
+
         Log.d("VIEWMODEL", "Using masterUserEmail=${email}")
-
-        viewmodelProfile.resultadoLoadCurrentUser.observe(viewLifecycleOwner) {r : RawUser ->
-            binding.tvProfileNomeUser.setText("${r.nome}")
-            binding.tvProfileDescricaoUser.setText("${r.quem_sou}")
-        }
-        viewmodelProfile.resultadoCountCurrentUserReviews.observe(viewLifecycleOwner) {c : Int ->
-            binding.tvProfileNumeroReviews.setText("${c} Reviews")
-        }
-
-        Log.d("VIEWMODEL","ProfileFragment>onViewCreated> Chamando método loadCUrrentUserByEmail(${email})")
         if (email != null) {
-            Log.d("VIEWMODEL","Passei do  email != null")
+            Log.d("VIEWMODEL", "Passei do  email != null")
             viewmodelProfile.loadCurrentUserByEmail(email)
         }
-        //Log.d("VIEWMODEL","ProfileFragment>onViewCreated> Criando resultadoLoadCurrentUser.observe")
-
-        /**viewmodelProfile.resultadoLoadCurrentUser.observe(viewLifecycleOwner) {r : RawUser ->
-            binding.tvProfileNomeUser.setText("${r.nome}")
-            binding.tvProfileDescricaoUser.setText("${r.quem_sou}")
-        }*/
-
-        //Log.d("VIEWMODEL","ProfileFragment>onViewCreated> Criando resultadoCountCurrentUserReviews.observe")
-
-        /**viewmodelProfile.resultadoCountCurrentUserReviews.observe(viewLifecycleOwner) {c : Int ->
-            binding.tvProfileNumeroReviews.setText("${c} Reviews")
-        }*/
-
-
-        }
+    }
 }
