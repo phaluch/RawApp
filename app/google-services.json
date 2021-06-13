@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "843967708863",
+    "project_id": "rawapp-de72f",
+    "storage_bucket": "rawapp-de72f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843967708863:android:2b9dea495ae59c8be3900a",
+        "android_client_info": {
+          "package_name": "com.rawenterprises.rawapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843967708863-96hjcookno65rkbi1jtvqp3fkru1lngp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt5NvJutHrnnYZ2Gyk3lmKOW-vdntYWtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843967708863-96hjcookno65rkbi1jtvqp3fkru1lngp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
