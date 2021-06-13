@@ -10,7 +10,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.rawenterprises.rawapp.R
 import com.rawenterprises.rawapp.databinding.FragmentFirstScreenBinding
 import com.rawenterprises.rawapp.databinding.FragmentSecondScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FirstScreenFragment : Fragment() {
 
     private lateinit var binding: FragmentFirstScreenBinding

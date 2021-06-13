@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import com.rawenterprises.rawapp.R
 import com.rawenterprises.rawapp.databinding.FragmentCreateReviewBinding
 import com.rawenterprises.rawapp.databinding.FragmentLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CreateReviewFragment : Fragment() {
 
     private lateinit var binding: FragmentCreateReviewBinding
