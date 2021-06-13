@@ -40,5 +40,10 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
         }
 
+        binding.tvLojas.setOnClickListener {  findNavController().navigate(R.id.action_homeFragment_to_mapsFragment) }
+        
+//        viewmodel.funChamandoRequisicao()
+        Log.d("VIEWMODEL"," HomeFragment.onViewCreated: Chamando viewmodel.loadProdutos()")
+        viewmodel.loadProdutos()
     }
 }
