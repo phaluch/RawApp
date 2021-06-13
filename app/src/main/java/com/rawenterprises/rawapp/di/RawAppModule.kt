@@ -58,6 +58,10 @@ class RawAppModule {
         /** ------------ > Data */
         suspend fun getProductsBySubstring(): List<Produto>
 
+        @GET("produtoById")
+        @Headers("Content-Type: application/json")
+        suspend fun getProductById(@Query("objectId") objectId : String): Produto
+
         /************
          * USERS *
          ***********/

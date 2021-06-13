@@ -24,11 +24,14 @@ public class RawViewModel @Inject constructor(
     val resultadoLoadProdutos = MutableLiveData <List<Produto>> () // O tipo de dado é o do que eu vou receber
     val resultadoWriteUser = MutableLiveData < RawUser> () // O tipo de dado é o do que eu vou receber
     val resultadoLoadUserByEmail = MutableLiveData<RawUser> ()
+    val resultadoLoadProdutoById = MutableLiveData <Produto> ()
+
 
     /** Usuário Logado */
     val resultadoLoadCurrentUser = MutableLiveData<RawUser> () // Esse é o mesmo tipo de response
     val resultadoLoadUserReviews = MutableLiveData <List<Avaliation>> ()
     var resultadoCountCurrentUserReviews = MutableLiveData<Int> ()
+
     // da linha de cima, mas é só pra separar
 
     /** Criando um container (resultado) que pode ter os dados dentro dele mutáveis (LiveData), e que
@@ -48,6 +51,15 @@ public class RawViewModel @Inject constructor(
         viewModelScope.launch {
             Log.d("VIEWMODEL","Chamando o Interactor")
             resultadoLoadProdutos.value = interactor.loadProdutos()  // Dentro do tal 'Container' os valores ficam no .value
+        }
+    }
+
+    fun loadProdutoById(oid : String) {
+        Log.d("VIEWMODEL","Entrei na Função")
+
+        viewModelScope.launch {
+            Log.d("VIEWMODEL","Chamando o Interactor")
+            resultadoLoadProdutoById.value = interactor.loadProdutoById(oid)  // Dentro do tal 'Container' os valores ficam no .value
         }
     }
 
