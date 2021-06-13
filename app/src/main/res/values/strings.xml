@@ -58,6 +58,7 @@
     <string name="email">Email</string>
     <string name="quit">SAIR</string>
     <string name="reviews">MINHAS REVIEWS</string>
+    <string name="editarPerfil">ATUALIZAR PERFIL</string>
 
     <!--CREATE-->
     <string name="create_review_title">CRIAR UMA AVALIAÇÃO</string>
