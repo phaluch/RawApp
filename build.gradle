@@ -5,17 +5,19 @@ buildscript {
         kotlin_version = '1.4.31'
         hiltVersion="2.33-beta"
         hiltAndroidXVersion= '1.0.0'
+        nav_version="2.3.5"
     }
 
 
     repositories {
         google()
         mavenCentral()
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
         classpath 'com.google.gms:google-services:4.3.8'
 
         /** Injeção de Dependências */ //Faz o android studio 'entender' as injeções que vão acontecer

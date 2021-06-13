@@ -12,9 +12,10 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
-            app:destination="@id/profileFragment"
-            app:popUpTo="@id/profileFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listaProdutosFragment"
+            app:destination="@id/listaProdutosFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -23,9 +24,7 @@
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileFragment_to_editProfileFragment"
-            app:destination="@id/editProfileFragment"
-            app:popUpTo="@id/profileFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/editProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
@@ -33,6 +32,24 @@
         android:label="EditProfileFragment" >
         <action
             android:id="@+id/action_editProfileFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/editProfileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaProdutosFragment"
+        android:name="com.rawenterprises.rawapp.ui.fragment.ListaProdutosFragment"
+        android:label="ListaProdutosFragment" >
+        <action
+            android:id="@+id/action_listaProdutosFragment_to_productInfoFragment"
+            app:destination="@id/productInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productInfoFragment"
+        android:name="com.rawenterprises.rawapp.ui.fragment.ProductInfoFragment"
+        android:label="ProductInfoFragment" >
+
+        <argument android:name="objectId"
+            app:argType="string" />
     </fragment>
 </navigation>
