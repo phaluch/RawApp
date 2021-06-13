@@ -15,41 +15,75 @@
         android:layout_height="match_parent"
         tools:context=".ui.fragment.recuperarsenhaFragment" >
 
-        <EditText
-            android:id="@+id/etEmailRecuperarSenha"
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btRecuperarSenha"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="76dp"
-            android:ems="10"
-            android:hint="E-mail"
-            android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/btRecuperarSenha"
+            android:background="@drawable/round_background"
+            android:text="@string/btn_forgot"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emForgotEmail" />
 
-        <Button
-            android:id="@+id/btRecuperarSenha"
+
+        <TextView
+            android:id="@+id/tvForgotTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="200dp"
-            android:text="Enviar"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="28dp"
+            android:text="@string/tx_forgot_password_title"
+            android:textColor="#7a297a"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/ivRecuperar"
-            android:layout_width="151dp"
-            android:layout_height="149dp"
-            android:layout_marginTop="52dp"
-            android:src="@android:drawable/ic_menu_preferences"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/emForgotEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/round_border"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="@string/hint_email"
+            android:inputType="textWebEmailAddress|text"
+            android:padding="16dp"
+            android:textColor="@color/roxo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgotInstructions" />
+
+        <TextView
+            android:id="@+id/tvForgotInstructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/forgot_instructions"
+            android:textAlignment="center"
+            android:textColor="#7a297a"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgotTitulo" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
