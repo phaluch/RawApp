@@ -19,6 +19,14 @@ class RawAppInteractor @Inject constructor(
         return response
     }
 
+    suspend fun loadProdutoById(oid:String): Produto {
+        // TODO("Not yet implemented")
+        Log.d("VIEWMODEL","Interactor> repository()")
+        val response = repository.loadProdutoById(oid)
+        Log.d("VIEWMODEL","Interactor> got response")
+        return response
+    }
+
     suspend fun writeUser(u : RawUser): RawUser {
         // TODO("Not yet implemented")
         Log.d("VIEWMODEL","Interactor> repository()")
