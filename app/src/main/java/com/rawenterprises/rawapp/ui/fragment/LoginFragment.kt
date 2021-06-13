@@ -1,5 +1,6 @@
 package com.rawenterprises.rawapp.ui.fragment
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -65,6 +66,15 @@ class LoginFragment : Fragment() {
 
             taskDeLogin.addOnCompleteListener { resultado ->
                 if(resultado.isSuccessful) {
+
+                    val sharedPref = requireActivity().getSharedPreferences("GlobalVar", Context.MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+
+                    viewmodel.loadUserByEmail(email, editor)
+                    Log.d("VIEWMODEL", "resultadoLoadUserByEmail.value=${viewmodel.resultadoLoadUserByEmail.value}")
+                    val objectId = viewmodel.resultadoLoadUserByEmail.value?.objectId
+
+                    Log.d("VIEWMODEL", "btLoginListener > Saved ${email}")
                     val intencaoDeChamada = Intent(activity, AppActivity::class.java)
                     activity?.startActivity(intencaoDeChamada)
                 } else {
