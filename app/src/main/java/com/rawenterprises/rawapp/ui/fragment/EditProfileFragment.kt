@@ -11,7 +11,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.rawenterprises.rawapp.R
 import com.rawenterprises.rawapp.databinding.FragmentEditProfileBinding
-import com.rawenterprises.rawapp.databinding.FragmentProfileBinding
 import com.rawenterprises.rawapp.domain.RawUser
 import com.rawenterprises.rawapp.viewmodel.RawViewModel
 import dagger.hilt.android.AndroidEntryPoint

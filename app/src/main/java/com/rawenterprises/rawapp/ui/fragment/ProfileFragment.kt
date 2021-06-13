@@ -34,10 +34,6 @@ class ProfileFragment : Fragment() {
 
         val sharedPref = requireActivity().getSharedPreferences("GlobalVar", Context.MODE_PRIVATE)
         val email = sharedPref.getString("emailGlobal", null)
-        if (email != null) {
-            Log.d("VIEWMODEL", "Passei do  email != null")
-            viewmodelProfile.loadCurrentUserByEmail(email)
-        }
 
         // Inflate the layout for this fragment
         Log.d("VIEWMODEL","ProfileFragment>onCreateView> Retornando binding")
@@ -58,6 +54,10 @@ class ProfileFragment : Fragment() {
 
         val sharedPref = requireActivity().getSharedPreferences("GlobalVar", Context.MODE_PRIVATE)
         val email = sharedPref.getString("emailGlobal", null)
+        if (email != null) {
+            Log.d("VIEWMODEL", "Passei do  email != null")
+            viewmodelProfile.loadCurrentUserByEmail(email)
+        }
 
         viewmodelProfile.resultadoLoadCurrentUser.observe(viewLifecycleOwner) { c : RawUser ->
             Log.d("VIEWMODEL", "Using valores=${c.quem_sou},${c.nome}")

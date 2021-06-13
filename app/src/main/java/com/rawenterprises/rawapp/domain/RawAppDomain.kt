@@ -1,5 +1,7 @@
 package com.rawenterprises.rawapp.domain
 
+import kotlinx.serialization.Serializable
+
 class RawAppDomain {
 }
 
@@ -40,14 +42,14 @@ data class Loja (
 )
 
 data class Produto (
-    val objectId: String? = null,
+    val objectId: String,
     val createdAt: String? = null,
     val updatedAt: String? = null,
-    val fabricante: String? = null,
+    val Fabricante: Fabricante? = null,
     val descricao: String? = null,
     val info: String? = null,
     val image: String? = null,
-    val nome: String? = null
+    val nome: String? = null,
 )
 
 data class RawUser(
