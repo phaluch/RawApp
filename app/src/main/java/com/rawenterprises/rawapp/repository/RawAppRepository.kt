@@ -20,6 +20,7 @@ class RawAppRepository @Inject constructor(
         Log.d("VIEWMODEL","Repository> Instanciando retrofit: Retrofit.Builder()")
         return request.getProducts()
     }
+
     suspend fun loadProdutoById(oid : String): Produto {
         Log.d("VIEWMODEL","Repository> Instanciando retrofit: Retrofit.Builder()")
         return request.getProductById(oid)
